@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Personal portfolio of Israt Jaman Naima, a Computer Science & Engineering student at Southeast University and aspiring Full-Stack Web Developer.">
+<meta name="theme-color" content="#07080c">
+<meta property="og:title" content="Israt Jaman Naima | CSE Student & Aspiring Full-Stack Web Developer">
+<meta property="og:description" content="Learning today. Building tomorrow.">
+<title>Israt Jaman Naima | CSE Student & Aspiring Full-Stack Web Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#03040a;--bg2:#080b18;--panel:rgba(255,255,255,.065);--panel2:rgba(255,255,255,.018);--line:rgba(255,255,255,.13);--text:#f7f8ff;--muted:#98a2b8;--accent:#a78bfa;--accent2:#22d3ee;--pink:#f472b6;--max:1220px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,sans-serif;background:radial-gradient(circle at 12% 8%,rgba(124,58,237,.13),transparent 28%),radial-gradient(circle at 88% 28%,rgba(34,211,238,.09),transparent 25%),linear-gradient(135deg,var(--bg),var(--bg2) 52%,#04050b);color:var(--text);line-height:1.65;overflow-x:hidden}
+body:after{content:"";position:fixed;width:720px;height:720px;top:-280px;right:-260px;background:radial-gradient(circle,rgba(139,92,246,.18),transparent 62%);filter:blur(8px);z-index:-2;pointer-events:none}
+body{cursor:default}
+body:before{content:"";position:fixed;inset:0;z-index:-3;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:52px 52px;mask-image:linear-gradient(to bottom,black,transparent 96%);pointer-events:none}
+#cursor-glow{position:fixed;width:420px;height:420px;border-radius:50%;pointer-events:none;z-index:-1;background:radial-gradient(circle,rgba(139,92,246,.10),transparent 68%);transform:translate(-50%,-50%);mix-blend-mode:screen}
+a{color:inherit;text-decoration:none}
+.container{width:min(calc(100% - 40px),var(--max));margin:auto}
+nav{position:fixed;top:18px;left:50%;transform:translateX(-50%);width:min(calc(100% - 30px),1080px);z-index:100;padding:12px 16px;border:1px solid var(--line);border-radius:18px;background:rgba(8,9,13,.68);backdrop-filter:blur(18px);transition:.3s}
+.nav-inner{display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:"Space Grotesk";font-weight:700;letter-spacing:-.04em}.logo span{color:var(--accent2)}
+.nav-links{display:flex;gap:24px;font-size:13px;color:#b9c0ce}.nav-links a{transition:.25s}.nav-links a:hover{color:white}
+.menu{display:none;background:none;border:0;color:white;font-size:24px;cursor:pointer}
+section{padding:110px 0;position:relative}
+.hero{min-height:100vh;display:grid;place-items:center;padding-top:150px}
+.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:70px;align-items:center}
+.badge{display:inline-flex;gap:9px;align-items:center;border:1px solid var(--line);background:var(--panel);padding:7px 12px;border-radius:999px;font-size:11px;color:#cbd1dc;letter-spacing:.1em;text-transform:uppercase}
+.dot{width:7px;height:7px;border-radius:50%;background:#34d399;box-shadow:0 0 14px #34d399}
+h1,h2,h3{font-family:"Space Grotesk",sans-serif;line-height:1.05}
+h1{font-size:clamp(54px,8vw,108px);letter-spacing:-.075em;margin:24px 0;line-height:.94;text-wrap:balance;text-shadow:0 0 45px rgba(167,139,250,.10)}
+.gradient{background:linear-gradient(100deg,#fff 5%,#c4b5fd 38%,#67e8f9 72%,#f9a8d4 100%);background-size:220% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:gradientShift 7s ease infinite}
+.lead{max-width:690px;color:#aeb7ca;font-size:18px;line-height:1.85}
+.actions{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
+.btn{padding:12px 18px;border-radius:12px;border:1px solid var(--line);font-size:13px;font-weight:600;transition:.25s}
+.btn.primary{background:#f4f4f5;color:#090a0d}.btn:hover{transform:translateY(-3px);border-color:rgba(255,255,255,.25)}
+.visual{height:480px;position:relative;display:grid;place-items:center}
+.orb{width:300px;height:300px;border-radius:50%;background:radial-gradient(circle at 35% 30%,rgba(255,255,255,.32),rgba(139,92,246,.18) 28%,rgba(34,211,238,.08) 55%,transparent 70%);border:1px solid rgba(255,255,255,.12);box-shadow:0 0 100px rgba(139,92,246,.14),inset 0 0 80px rgba(34,211,238,.08);animation:float 6s ease-in-out infinite}
+.code-card{position:absolute;width:300px;border:1px solid var(--line);background:rgba(10,11,16,.72);backdrop-filter:blur(14px);border-radius:16px;padding:18px;box-shadow:0 20px 60px rgba(0,0,0,.35)}
+.code-card.top{top:45px;right:0}.code-card.bottom{bottom:55px;left:0}
+.codebar{display:flex;gap:6px;margin-bottom:15px}.codebar i{width:7px;height:7px;border-radius:50%;background:#555}
+pre{font:12px/1.8 ui-monospace,SFMono-Regular,Menlo,monospace;color:#b9c1cf}.purple{color:#c4b5fd}.cyan{color:#67e8f9}.green{color:#86efac}
+.section-head{max-width:720px;margin-bottom:45px}.eyebrow{color:#9d8cf6;text-transform:uppercase;letter-spacing:.18em;font-size:11px;font-weight:700;margin-bottom:12px}h2{font-size:clamp(36px,5vw,62px);letter-spacing:-.055em}.section-head p{color:var(--muted);margin-top:18px}
+.glass{background:linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,255,255,.018));border:1px solid var(--line);border-radius:24px;box-shadow:inset 0 1px 0 rgba(255,255,255,.07),0 24px 80px rgba(0,0,0,.22);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);transition:transform .45s cubic-bezier(.2,.8,.2,1),border-color .45s,box-shadow .45s}
+.statement{padding:40px;display:flex;justify-content:space-between;gap:30px;align-items:center}.statement h3{font-size:32px}.statement p{max-width:600px;color:var(--muted)}
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:25px}.about-card{padding:32px}.monogram{height:100%;min-height:390px;display:grid;place-items:center;overflow:hidden;position:relative}.monogram:before{content:"IJN";font-family:"Space Grotesk";font-size:130px;font-weight:700;letter-spacing:-.12em;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.15);transform:rotate(-8deg)}.ring{position:absolute;width:230px;height:230px;border:1px solid rgba(103,232,249,.22);border-radius:50%;animation:spin 18s linear infinite}.about-text{color:var(--muted);margin:20px 0 26px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.stat{padding:15px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.025)}.stat strong{display:block;color:white;font-size:15px}.stat span{font-size:10px;color:#858d9d;text-transform:uppercase;letter-spacing:.1em}
+.timeline{position:relative;max-width:850px}.timeline:before{content:"";position:absolute;left:14px;top:0;bottom:0;width:1px;background:linear-gradient(var(--accent),rgba(255,255,255,.06))}
+.item{position:relative;padding:0 0 30px 52px}.item:last-child{padding-bottom:0}.node{position:absolute;left:8px;top:4px;width:13px;height:13px;border-radius:50%;background:#0a0b10;border:2px solid #a78bfa;box-shadow:0 0 16px rgba(167,139,250,.45)}.item-card{padding:25px}.item h3{font-size:24px}.item p{color:var(--muted);margin-top:7px}.tag{display:inline-block;margin-top:15px;font-size:11px;border:1px solid var(--line);padding:5px 9px;border-radius:999px;color:#c8cfda}
+.skills{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.skill{padding:25px 18px;min-height:150px;transition:.25s}.skill:hover{transform:translateY(-5px);border-color:rgba(167,139,250,.35)}.skill-icon{font-size:24px;margin-bottom:18px}.skill h3{font-size:17px}.skill p{font-size:11px;color:#8991a0;margin-top:8px}
+.explore{display:flex;flex-wrap:wrap;gap:10px}.chip{padding:10px 13px;border:1px solid var(--line);border-radius:999px;background:var(--panel2);font-size:12px;color:#b7bfcc}
+.roadmap{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.phase{padding:25px;min-height:170px;position:relative;overflow:hidden}.phase:after{content:"";position:absolute;width:110px;height:110px;right:-55px;bottom:-55px;border-radius:50%;background:radial-gradient(circle,rgba(139,92,246,.16),transparent 70%)}.num{font:12px "Space Grotesk";color:#a78bfa}.phase h3{font-size:20px;margin:18px 0 8px}.phase p{font-size:12px;color:var(--muted)}
+.growth{display:grid;grid-template-columns:1fr 1fr;gap:25px}.growth-card{padding:34px}.flow{display:flex;flex-wrap:wrap;gap:9px;margin-top:25px}.flow span{font-family:"Space Grotesk";font-weight:600;font-size:14px;border-bottom:1px solid rgba(167,139,250,.4);padding-bottom:5px}
+.hobbies{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.hobby{padding:30px;min-height:210px}.hobby .icon{font-size:32px}.hobby h3{margin:20px 0 8px;font-size:22px}.hobby p{color:var(--muted);font-size:13px}
+.vision{padding:70px 8%;text-align:center;overflow:hidden}.vision:before{content:"";position:absolute;width:500px;height:500px;left:50%;top:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(139,92,246,.12),transparent 65%);pointer-events:none}.quote{position:relative;font-family:"Space Grotesk";font-size:clamp(30px,4.5vw,58px);letter-spacing:-.05em;max-width:950px;margin:25px auto}.vision p{position:relative;color:var(--muted);max-width:720px;margin:auto}
+.goals{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.goal{padding:25px;min-height:150px}.goal b{font:12px "Space Grotesk";color:#a78bfa}.goal h3{font-size:18px;margin-top:20px}
+.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.project{padding:28px;min-height:240px;display:flex;flex-direction:column;justify-content:space-between}.project h3{font-size:24px}.project p{color:var(--muted);font-size:13px}.project .status{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:#9ba3b4}
+.contact{display:grid;grid-template-columns:.85fr 1.15fr;gap:25px}.contact-info,.form{padding:32px}.contact-info p{color:var(--muted);margin-top:18px}.links{display:flex;gap:8px;flex-wrap:wrap;margin-top:25px}.links a{font-size:11px;padding:8px 11px;border:1px solid var(--line);border-radius:999px;color:#c2c9d5}
+form{display:grid;gap:12px}input,textarea{width:100%;background:rgba(255,255,255,.035);border:1px solid var(--line);border-radius:12px;padding:13px 14px;color:white;font:13px Inter;outline:none}input:focus,textarea:focus{border-color:rgba(167,139,250,.65)}textarea{min-height:130px;resize:vertical}
+footer{border-top:1px solid var(--line);padding:35px 0;color:#737b8b;font-size:12px}.footer-inner{display:flex;justify-content:space-between;gap:20px}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}.reveal.show{opacity:1;transform:none}
+@keyframes float{50%{transform:translateY(-15px) scale(1.02)}}@keyframes spin{to{transform:rotate(360deg)}}
+
+.glass:hover{transform:translateY(-8px);border-color:rgba(167,139,250,.30);box-shadow:inset 0 1px 0 rgba(255,255,255,.09),0 30px 90px rgba(0,0,0,.32),0 0 35px rgba(139,92,246,.07)}
+.hero-grid{perspective:1200px}
+.visual{perspective:900px}
+.code-card{animation:cardFloat 6s ease-in-out infinite;transform-style:preserve-3d}
+.code-card.bottom{animation-delay:-2.2s}
+.orb{position:relative}
+.orb:before,.orb:after{content:"";position:absolute;inset:-18px;border:1px solid rgba(103,232,249,.16);border-radius:50%;transform:rotateX(68deg);animation:orbit 11s linear infinite}
+.orb:after{inset:-38px;border-color:rgba(167,139,250,.13);transform:rotateY(65deg) rotateX(12deg);animation-duration:15s}
+.badge{box-shadow:0 0 30px rgba(52,211,153,.06)}
+.btn{position:relative;overflow:hidden}
+.btn:before{content:"";position:absolute;inset:-2px;background:linear-gradient(110deg,transparent 20%,rgba(255,255,255,.35),transparent 70%);transform:translateX(-120%);transition:transform .65s}
+.btn:hover:before{transform:translateX(120%)}
+.section-head h2{background:linear-gradient(100deg,#fff,#d7d2fe 65%,#8eeaf7);-webkit-background-clip:text;background-clip:text;color:transparent}
+.item-card{position:relative;overflow:hidden}
+.item-card:after{content:"";position:absolute;left:0;top:0;width:2px;height:100%;background:linear-gradient(180deg,var(--accent),var(--accent2),transparent);opacity:.75}
+.skill-icon{filter:drop-shadow(0 0 14px rgba(167,139,250,.35))}
+.chip{transition:.3s}
+.chip:hover{transform:translateY(-3px);border-color:rgba(103,232,249,.35);box-shadow:0 0 25px rgba(34,211,238,.06)}
+.phase{transition:transform .45s cubic-bezier(.2,.8,.2,1),border-color .45s}
+.phase:hover{transform:translateY(-8px) scale(1.015)}
+.phase:before{content:"";position:absolute;left:0;top:0;width:100%;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent);transform:translateX(-100%);transition:.7s}
+.phase:hover:before{transform:translateX(100%)}
+.quote{text-shadow:0 0 50px rgba(167,139,250,.08)}
+.project{transition:.45s}
+.project:hover{transform:translateY(-10px) rotateX(2deg)}
+@keyframes gradientShift{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+@keyframes cardFloat{0%,100%{transform:translateY(0) rotateZ(0)}50%{transform:translateY(-10px) rotateZ(.6deg)}}
+@keyframes orbit{to{transform:rotateX(68deg) rotateZ(360deg)}}
+@media(prefers-reduced-motion:reduce){.gradient,.code-card,.orb:before,.orb:after{animation:none}}
+
+@media(max-width:900px){.hero-grid,.about,.growth,.contact{grid-template-columns:1fr}.visual{height:390px}.skills{grid-template-columns:repeat(2,1fr)}.roadmap{grid-template-columns:repeat(2,1fr)}.goals,.projects{grid-template-columns:1fr 1fr}.hobbies{grid-template-columns:1fr}.nav-links{display:none}.menu{display:block}.nav-links.open{display:flex;position:absolute;left:0;right:0;top:60px;padding:18px;flex-direction:column;background:rgba(8,9,13,.95);border:1px solid var(--line);border-radius:15px}.statement{flex-direction:column;align-items:flex-start}}
+@media(max-width:560px){.container{width:min(calc(100% - 26px),var(--max))}section{padding:80px 0}.hero{padding-top:120px}.visual{height:340px}.orb{width:220px;height:220px}.code-card{width:235px}.code-card.top{right:-5px;top:25px}.code-card.bottom{left:-5px;bottom:20px}.stats{grid-template-columns:1fr 1fr}.skills,.roadmap,.goals,.projects{grid-template-columns:1fr}.statement,.about-card,.growth-card,.contact-info,.form,.vision{padding:25px}.footer-inner{flex-direction:column}.nav-links{gap:12px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{transition:none}.orb,.ring{animation:none}}
+</style>
+</head>
+<body>
+<div id="cursor-glow"></div>
+<nav>
+  <div class="nav-inner">
+    <a class="logo" href="#home">IJ<span>.</span>N</a>
+    <div class="nav-links" id="navLinks">
+      <a href="#home">Home</a><a href="#about">About</a><a href="#education">Education</a><a href="#skills">Skills</a><a href="#journey">Journey</a><a href="#vision">Vision</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+    </div>
+    <button class="menu" id="menu" aria-label="Open navigation">☰</button>
+  </div>
+</nav>
+
+<main id="home">
+<section class="hero">
+<div class="container hero-grid">
+<div class="reveal">
+  <div class="badge"><span class="dot"></span> Currently learning & growing in IT</div>
+  <h1>Hi, I'm <span class="gradient">Israt Jaman Naima.</span></h1>
+  <p class="lead">CSE Student • Aspiring Full-Stack Web Developer • Future Builder. I'm developing my technical foundation, exploring web technologies, and preparing to build meaningful digital experiences.</p>
+  <div class="actions"><a class="btn primary" href="#journey">Explore My Journey</a><a class="btn" href="#contact">Let's Connect</a></div>
+</div>
+<div class="visual reveal" aria-label="Futuristic developer visual">
+  <div class="orb"></div>
+  <div class="ring"></div>
+  <div class="code-card top"><div class="codebar"><i></i><i></i><i></i></div><pre><span class="purple">const</span> <span class="cyan">future</span> = {
+  learner: <span class="green">true</span>,
+  goal: <span class="green">"Full-Stack"</span>,
+  mindset: <span class="green">"keep growing"</span>
+};</pre></div>
+  <div class="code-card bottom"><div class="codebar"><i></i><i></i><i></i></div><pre><span class="purple">&lt;developer&gt;</span>
+  learning<span class="cyan">.today()</span>;
+  building<span class="cyan">.tomorrow()</span>;
+<span class="purple">&lt;/developer&gt;</span></pre></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="glass statement reveal">
+  <div><div class="eyebrow">Personal Brand</div><h3>Learning today. Building tomorrow.</h3></div>
+  <p>Every skill starts with curiosity. I'm building my foundation in technology, exploring web development, and continuously working toward my goal of becoming a Full-Stack Web Developer.</p>
+</div>
+</div>
+</section>
+
+<section id="about">
+<div class="container">
+<div class="section-head reveal"><div class="eyebrow">01 / About</div><h2>A little about me.</h2></div>
+<div class="about">
+  <div class="glass monogram reveal"><div class="ring"></div></div>
+  <div class="glass about-card reveal">
+    <div class="eyebrow">CSE Student • Southeast University</div>
+    <h3 style="font-size:30px">Curious by nature. Growing by choice.</h3>
+    <p class="about-text">I am Israt Jaman Naima, a Computer Science & Engineering student at Southeast University. I completed my SSC from Monohardi Govt. Pilot Model High School and my HSC from Narsingdi Science College, achieving GPA 5.00 in both examinations. Currently, I am focusing on developing my technical foundation and learning modern tools and technologies used in the IT industry.</p>
+    <div class="stats">
+      <div class="stat"><strong>5.00</strong><span>SSC GPA</span></div>
+      <div class="stat"><strong>5.00</strong><span>HSC GPA</span></div>
+      <div class="stat"><strong>CSE</strong><span>Current Field</span></div>
+      <div class="stat"><strong>Full-Stack</strong><span>Career Goal</span></div>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+
+<section id="education">
+<div class="container">
+<div class="section-head reveal"><div class="eyebrow">02 / Education</div><h2>My academic journey.</h2><p>A foundation built through consistent academic growth and a new chapter in Computer Science & Engineering.</p></div>
+<div class="timeline">
+<div class="item reveal"><span class="node"></span><div class="glass item-card"><div class="eyebrow">01 — SSC</div><h3>Monohardi Govt. Pilot Model High School</h3><p>Secondary School Certificate</p><span class="tag">GPA 5.00</span></div></div>
+<div class="item reveal"><span class="node"></span><div class="glass item-card"><div class="eyebrow">02 — HSC</div><h3>Narsingdi Science College</h3><p>Higher Secondary Certificate</p><span class="tag">GPA 5.00</span></div></div>
+<div class="item reveal"><span class="node"></span><div class="glass item-card"><div class="eyebrow">03 — University</div><h3>Southeast University</h3><p>Computer Science & Engineering (CSE)</p><span class="tag">Currently Studying</span></div></div>
+</div>
+</div>
+</section>
+
+<section id="skills">
+<div class="container">
+<div class="section-head reveal"><div class="eyebrow">03 / Skills</div><h2>Skills I'm building.</h2><p>Honest progress over exaggerated expertise. These are the areas I'm currently developing.</p></div>
+<div class="skills">
+<div class="glass skill reveal"><div class="skill-icon">⌘</div><h3>HTML</h3><p>Learning / Developing</p></div>
+<div class="glass skill reveal"><div class="skill-icon">◇</div><h3>CSS</h3><p>Learning / Developing</p></div>
+<div class="glass skill reveal"><div class="skill-icon">W</div><h3>Microsoft Word</h3><p>Working Knowledge</p></div>
+<div class="glass skill reveal"><div class="skill-icon">P</div><h3>PowerPoint</h3><p>Working Knowledge</p></div>
+<div class="glass skill reveal"><div class="skill-icon">↗</div><h3>IT Skills</h3><p>Growing</p></div>
+</div>
+<div style="margin-top:35px" class="reveal"><div class="eyebrow">Currently Exploring</div><div class="explore"><span class="chip">JavaScript</span><span class="chip">Responsive Web Design</span><span class="chip">Front-End Development</span><span class="chip">Back-End Development</span><span class="chip">Databases</span><span class="chip">APIs</span><span class="chip">Modern Web Technologies</span></div></div>
+</div>
+</section>
+
+<section id="journey">
+<div class="container">
+<div class="section-head reveal"><div class="eyebrow">04 / Full-Stack Journey</div><h2>My road to Full-Stack Development.</h2><p>A long-term learning path — one milestone at a time.</p></div>
+<div class="roadmap">
+<div class="glass phase reveal"><div class="num">PHASE 01</div><h3>HTML & CSS</h3><p>Currently Learning</p></div>
+<div class="glass phase reveal"><div class="num">PHASE 02</div><h3>JavaScript</h3><p>Next Step</p></div>
+<div class="glass phase reveal"><div class="num">PHASE 03</div><h3>Front-End</h3><p>React / Next.js as future goals</p></div>
+<div class="glass phase reveal"><div class="num">PHASE 04</div><h3>Back-End</h3><p>Node.js / Express</p></div>
+<div class="glass phase reveal"><div class="num">PHASE 05</div><h3>Databases</h3><p>MongoDB / PostgreSQL</p></div>
+<div class="glass phase reveal"><div class="num">PHASE 06</div><h3>APIs</h3><p>Authentication & integrations</p></div>
+<div class="glass phase reveal"><div class="num">PHASE 07</div><h3>Deployment</h3><p>Cloud & production workflows</p></div>
+<div class="glass phase reveal"><div class="num">FINAL GOAL</div><h3>Full-Stack Developer</h3><p>Professional-level capability</p></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="growth">
+<div class="glass growth-card reveal"><div class="eyebrow">05 / Growth</div><h2>Always learning.<br>Always growing.</h2><p style="color:var(--muted);margin-top:20px">Technology is constantly changing, so I believe learning should never stop. I want to continuously improve my technical knowledge, explore new technologies, and become better through practice and real-world projects.</p></div>
+<div class="glass growth-card reveal"><div class="eyebrow">The Process</div><div class="flow"><span>LEARN</span><span>→</span><span>PRACTICE</span><span>→</span><span>BUILD</span><span>→</span><span>IMPROVE</span><span>→</span><span>CREATE</span></div></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="section-head reveal"><div class="eyebrow">06 / Beyond Code</div><h2>What I enjoy outside technology.</h2></div>
+<div class="hobbies">
+<div class="glass hobby reveal"><div class="icon">🎨</div><h3>Drawing</h3><p>A creative activity that allows me to express ideas beyond technology.</p></div>
+<div class="glass hobby reveal"><div class="icon">🎬</div><h3>Watching Movies</h3><p>A way to relax, explore stories, and experience different perspectives.</p></div>
+<div class="glass hobby reveal"><div class="icon">✈️</div><h3>Travelling</h3><p>An opportunity to discover new places, people, cultures, and experiences.</p></div>
+</div>
+</div>
+</section>
+
+<section id="vision">
+<div class="container">
+<div class="glass vision reveal">
+<div class="eyebrow">07 / Purpose</div><h2>More than a career.</h2>
+<div class="quote">“Since childhood, I have dreamed of growing up and doing something meaningful for underprivileged people.”</div>
+<p>For me, technology is not only about writing code or building websites. I want to develop skills that can eventually help me create useful solutions, opportunities, and meaningful impact for people who need them.</p>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="section-head reveal"><div class="eyebrow">08 / Future Goals</div><h2>Where I want to go.</h2></div>
+<div class="goals">
+<div class="glass goal reveal"><b>01</b><h3>Become a professional Full-Stack Web Developer</h3></div>
+<div class="glass goal reveal"><b>02</b><h3>Build real-world web applications</h3></div>
+<div class="glass goal reveal"><b>03</b><h3>Improve problem-solving abilities</h3></div>
+<div class="glass goal reveal"><b>04</b><h3>Master modern web technologies</h3></div>
+<div class="glass goal reveal"><b>05</b><h3>Develop strong professional IT skills</h3></div>
+<div class="glass goal reveal"><b>06</b><h3>Use technology to create meaningful impact</h3></div>
+</div>
+</div>
+</section>
+
+<section id="projects">
+<div class="container">
+<div class="section-head reveal"><div class="eyebrow">09 / Projects</div><h2>Building in progress.</h2><p>I'm currently strengthening my technical foundation. This space will grow with real-world projects, experiments, and applications.</p></div>
+<div class="projects">
+<div class="glass project reveal"><span class="status">Project 01</span><h3>Coming Soon</h3><p>A future project will appear here as my development journey progresses.</p><span class="tag">Currently Learning</span></div>
+<div class="glass project reveal"><span class="status">Project 02</span><h3>In Development</h3><p>Reserved for a practical web application built from the skills I'm developing.</p><span class="tag">Building in Progress</span></div>
+<div class="glass project reveal"><span class="status">Project 03</span><h3>Future Build</h3><p>A future experiment, application, or meaningful digital solution.</p><span class="tag">Coming Soon</span></div>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+<div class="section-head reveal"><div class="eyebrow">10 / Contact</div><h2>Let's connect.</h2></div>
+<div class="contact">
+<div class="glass contact-info reveal"><h3 style="font-size:30px">Have an idea or opportunity?</h3><p>Whether it's about technology, web development, learning, collaboration, or simply sharing ideas — I'd love to connect.</p><div class="links"><a href="#" aria-label="GitHub placeholder">GitHub</a><a href="#" aria-label="LinkedIn placeholder">LinkedIn</a><a href="#" aria-label="Facebook placeholder">Facebook</a><a href="#" aria-label="Instagram placeholder">Instagram</a></div></div>
+<div class="glass form reveal"><form onsubmit="event.preventDefault();alert('Thanks! Please connect your preferred email service to make this form functional.');"><input type="text" placeholder="Your name" aria-label="Your name" required><input type="email" placeholder="Your email" aria-label="Your email" required><textarea placeholder="Your message" aria-label="Your message" required></textarea><button class="btn primary" type="submit">Send Message</button></form></div>
+</div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="container footer-inner"><div><strong style="color:#dce1ea">Israt Jaman Naima</strong><br>CSE Student • Aspiring Full-Stack Web Developer</div><div>Learning today. Building tomorrow.<br>© 2026 Israt Jaman Naima. All Rights Reserved.</div></div>
+</footer>
+
+<script>
+const menu=document.getElementById('menu'),links=document.getElementById('navLinks');
+menu.addEventListener('click',()=>links.classList.toggle('open'));
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+const glow=document.getElementById('cursor-glow');
+window.addEventListener('pointermove',e=>{
+  glow.animate({left:e.clientX+'px',top:e.clientY+'px'},{duration:500,fill:'forwards'});
+});
+const cards=document.querySelectorAll('.skill,.phase,.goal,.project,.hobby');
+cards.forEach(card=>{
+  card.addEventListener('pointermove',e=>{
+    const r=card.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+    card.style.transform=`perspective(700px) rotateX(${y*-4}deg) rotateY(${x*5}deg) translateY(-6px)`;
+  });
+  card.addEventListener('pointerleave',()=>card.style.transform='');
+});
+
+</script>
+</body>
+</html>
